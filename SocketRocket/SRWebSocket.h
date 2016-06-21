@@ -193,7 +193,7 @@ NS_DESIGNATED_INITIALIZER;
  @param runLoop The run loop on which to schedule the receiver.
  @param mode     The mode for the run loop.
  */
-- (void)scheduleInRunLoop:(NSRunLoop *)runLoop forMode:(NSString *)mode;
+- (void)scheduleInRunLoop:(NSRunLoop *)runLoop forMode:(NSString *)mode NS_SWIFT_NAME(schedule(in:forMode:));
 
 /**
  Removes the receiver from a given run loop running in a given mode.
@@ -201,7 +201,7 @@ NS_DESIGNATED_INITIALIZER;
  @param runLoop The run loop on which the receiver was scheduled.
  @param mode    The mode for the run loop.
  */
-- (void)unscheduleFromRunLoop:(NSRunLoop *)runLoop forMode:(NSString *)mode;
+- (void)unscheduleFromRunLoop:(NSRunLoop *)runLoop forMode:(NSString *)mode NS_SWIFT_NAME(unschedule(from:forMode:));
 
 ///--------------------------------------
 #pragma mark - Open / Close
@@ -359,7 +359,7 @@ NS_DESIGNATED_INITIALIZER;
 
  @return `YES` if text frame should be converted to UTF-8 String, otherwise - `NO`. Default: `YES`.
  */
-- (BOOL)webSocketShouldConvertTextFrameToString:(SRWebSocket *)webSocket;
+- (BOOL)webSocketShouldConvertTextFrameToString:(SRWebSocket *)webSocket NS_SWIFT_NAME(webSocketShouldConvertTextFrameToString(_:));
 
 @end
 
